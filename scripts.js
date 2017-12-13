@@ -11,11 +11,11 @@ $(function() {
 	};
 
 	function Column(name) {
-    var self = this; 
+    	var self = this; 
 
-    this.id = randomString();
-    this.name = name;
-    this.$element = createColumn();
+    	this.id = randomString();
+    	this.name = name;
+    	this.$element = createColumn();
 
     function createColumn() {
     	var $column = $('<div>').addClass('column');
@@ -40,7 +40,7 @@ $(function() {
     	}
   	}
 
-	 Column.prototype = {
+	Column.prototype = {
 		addCard: function(card) {
 		    this.$element.children('ul').append(card.$element);
 		},
