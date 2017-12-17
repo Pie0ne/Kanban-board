@@ -56,8 +56,7 @@ $(function() {
 	    this.description = description;
 	    this.$element = createCard();
 
-    function createCard() {
-    	
+    function createCard() {   	
     	var $card = $('<li>').addClass('card');
     	var $cardDescription = $('<p>').addClass('card-description').text(self.description);
     	var $cardDelete = $('<button>').addClass('btn-delete').text('x');
@@ -86,7 +85,6 @@ $(function() {
     	$element: $('#board .column-container')
 	};
 
-
 	function initSortable() {
    		$('.column-card-list').sortable( {
      		connectWith: '.column-card-list',
@@ -111,7 +109,9 @@ $(function() {
 
 	var card1 = new Card('New task');
 	var card2 = new Card('Create kanban boards');
+	var card3 = new Card('Task Done');
 		
 	todoColumn.addCard(card1);
 	doingColumn.addCard(card2);
+	doneColumn.addCard(card3);
 });
