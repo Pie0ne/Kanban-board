@@ -55,6 +55,12 @@ body {
     cursor: pointer;
     color: #fff;
     border-radius: 50px; }
+    .column .add-card:hover {
+      transition: .7s;
+      color: #25459b;
+      background-color: #fff;
+      font-weight: 500;
+      border: 1px solid #fff; }
 
 .card {
   margin-top: 40px;
