@@ -35,7 +35,8 @@ body {
   margin: 20px 80px;
   background: #DADED9;
   padding: 30px;
-  border-radius: 25px; }
+  border-radius: 25px;
+  min-width: 200px; }
   .column h2 {
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 40px; }
@@ -46,7 +47,8 @@ body {
     cursor: pointer;
     padding: 0 5px;
     font-size: 18px;
-    margin-right: 5px; }
+    margin-left: 5px;
+    border-radius: 50px; }
   .column .add-card {
     padding: 3px 15px;
     background-color: #25459b;
@@ -54,7 +56,8 @@ body {
     font-size: 15px;
     cursor: pointer;
     color: #fff;
-    border-radius: 50px; }
+    border-radius: 50px;
+    margin-left: 5px; }
     .column .add-card:hover {
       transition: .7s;
       color: #25459b;
@@ -76,6 +79,9 @@ body {
 
 ul {
   list-style-type: none;
-  padding-left: 0; }
+  padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
+  min-height: 30px; }
 
 /*# sourceMappingURL=style.css.map */

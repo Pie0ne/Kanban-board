@@ -21,20 +21,20 @@ $(function() {
     	var $column = $('<div>').addClass('column');
 		var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
 		var $columnCardList = $('<ul>').addClass('column-card-list');
-		var $columnDelete = $('<button>').addClass('btn-delete').text('x');
 		var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
-
-		$columnDelete.click(function() {
-        	self.removeColumn();
-		});
+		var $columnDelete = $('<button>').addClass('btn-delete').text('x');
 
     	$columnAddCard.click(function() {
         	self.addCard(new Card(prompt("Enter the name of the card")));
 		});
 
+		$columnDelete.click(function() {
+        	self.removeColumn();
+		});
+
 		$column.append($columnTitle)
-        		.append($columnDelete)
-        		.append($columnAddCard)
+				.append($columnAddCard)
+        		.append($columnDelete)  
         		.append($columnCardList);
 		return $column;
     	}
@@ -58,8 +58,9 @@ $(function() {
 
     function createCard() {   	
     	var $card = $('<li>').addClass('card');
-    	var $cardDescription = $('<p>').addClass('card-description').text(self.description);
     	var $cardDelete = $('<button>').addClass('btn-delete').text('x');
+    	var $cardDescription = $('<p>').addClass('card-description').text(self.description);
+    	
 
     	$cardDelete.click(function(){
         	self.removeCard();

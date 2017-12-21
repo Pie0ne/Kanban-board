@@ -44,6 +44,7 @@ body {
 	background: #DADED9;
 	padding: 30px;
 	border-radius: 25px;
+	min-width: 200px;
 	h2 {
 		font-family: 'Gloria Hallelujah', cursive;
 		font-size: 40px;
@@ -51,11 +52,12 @@ body {
 	.btn-delete {
 		background-color: #ff0700;
 		color: #fff;
-		border: 1px solid #ff0700;
+		border: 1px solid #ff0700; 
 		cursor: pointer;
 		padding: 0 5px;
 		font-size: 18px;
-		margin-right: 5px;
+		margin-left: 5px;
+		border-radius: 50px;
 	}
 	.add-card {
 		padding: 3px 15px;
@@ -65,6 +67,7 @@ body {
 		cursor: pointer;
 		color: #fff;
 		border-radius: 50px;
+		margin-left: 5px;
 		&:hover {
 			transition: .7s;
 			color: #25459b;
@@ -91,4 +94,7 @@ body {
 ul {
 	list-style-type: none;
 	padding-left: 0;
+    list-style-type: none;
+    padding-left: 0;
+    min-height: 30px;
 }
