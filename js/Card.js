@@ -33,4 +33,18 @@ Card.prototype = {
 	    });
 	}
 }
-
+	
+/* function changeCard() {
+	 	var self = this;
+		$.ajax({
+			url: baseUrl + '/card' + self.id,
+			method: 'PUT',
+			data: {	
+				id: self.id,			
+				name: self.name,
+				bootcamp_kanban_column_id: 
+			}
+			success: function(response) {
+				
+			}
+		});*/

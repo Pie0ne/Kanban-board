@@ -1,7 +1,10 @@
 
 	function Column(id, name) {
+	var self = this; 
     this.id = id;
     this.name = name || 'No name given';
+    this.element = createColumn();
+
 
 	function createColumn() {
 		var column = $('<div class="column"></div>');
