@@ -45,10 +45,6 @@ body {
 	padding: 30px;
 	border-radius: 25px;
 	min-width: 200px;
-	h2 {
-		font-family: 'Gloria Hallelujah', cursive;
-		font-size: 40px;
-	}
 	.btn-delete {
 		background-color: #ff0700;
 		color: #fff;
@@ -59,6 +55,28 @@ body {
 		margin-left: 5px;
 		border-radius: 50px;
 	}
+	.column-add-card {
+		padding: 3px 15px;
+		background-color: #25459b;
+		border: 1px solid #25459b;
+		font-size: 15px;
+		cursor: pointer;
+		color: #fff;
+		border-radius: 50px;
+		margin-left: 5px;
+		&:hover {
+			transition: .7s;
+			color: #25459b;
+			background-color: #fff;
+			font-weight: 500;
+			border: 1px solid #fff;
+		}
+	}
+	h2 {
+		font-family: 'Gloria Hallelujah', cursive;
+		font-size: 40px;
+	}
+	
 	.add-card {
 		padding: 3px 15px;
 		background-color: #25459b;

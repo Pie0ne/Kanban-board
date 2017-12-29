@@ -68,7 +68,7 @@ $(function() {
 
 		$card.append($cardDelete)
 			.append($cardDescription);
-		return $card;
+			return $card;
     	}
 
     	Card.prototype = {
