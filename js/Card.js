@@ -1,7 +1,6 @@
 
 function Card(id, name) {
-	var self = this;
-	
+	var self = this;	
 	this.id = id;
 	this.name = name || 'No name given';
 	this.element = createCard();
@@ -37,7 +36,7 @@ Card.prototype = {
 /* function changeCard() {
 	 	var self = this;
 		$.ajax({
-			url: baseUrl + '/card' + self.id,
+			url: baseUrl + '/card/' + self.id,
 			method: 'PUT',
 			data: {	
 				id: self.id,			
