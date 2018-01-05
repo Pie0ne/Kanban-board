@@ -11,6 +11,7 @@ function Column(id, name) {
 		var columnCardList = $('<ul class="card-list"></ul>');
 		var columnDelete = $('<button class="btn-delete">x</button>');
 		var columnAddCard = $('<button class="column-add-card">Add card</button>');
+		var columnEdit = $('<button class="edit-column">Edit</button>');
 			
 		columnAddCard.click(function(event) {
 			var cardName = prompt("Enter the name of the card");
@@ -19,8 +20,8 @@ function Column(id, name) {
 	    		url: baseUrl + '/card',
 	    		method: 'POST',
 	    		data: {
-	    		name: cardName,
-	    		bootcamp_kanban_column_id: self.id
+		    		name: cardName,
+		    		bootcamp_kanban_column_id: self.id
 	    		},
 			    success: function(response) {
 			        var card = new Card(response.id, cardName);
@@ -32,9 +33,16 @@ function Column(id, name) {
 			self.deleteColumn();
 		});
 
+		columnEdit.click(function() {
+			var newColumnName = prompt('Enter new column name');
+			self.editColumn(newColumnName);
+		});
+
+
 		column.append(columnTitle)
 			.append(columnAddCard)
 			.append(columnDelete)
+			.append(columnEdit)
 			.append(columnCardList);
 			return column;
 	}
@@ -53,5 +61,22 @@ Column.prototype = {
 		    	self.element.remove();
 	      	}
 	    });
- 	}	
-};
+ 	},
+ 	editColumn: function(newColumnName) {
+		var self = this;
+		$.ajax({
+			method: 'PUT',
+			url: baseUrl + '/column/' + self.id,
+			data: {
+				id: self.id,
+				name: newColumnName
+			},
+			success: function(response){
+				console.log(self.element);	
+				$(self.element).find('.column-title').text(newColumnName);				
+			}
+		});
+	}	
+}
+	
+	
