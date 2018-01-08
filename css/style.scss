@@ -54,13 +54,14 @@ body {
 	flex: 1;
 	.btn-delete {
 		background-color: #ff0700;
-		color: #fff;
-		border: 1px solid #ff0700; 
-		cursor: pointer;
-		padding: 0 5px;
-		font-size: 18px;
-		margin-left: 5px;
-		border-radius: 50px;
+	    color: #fff;
+	    border: 1px solid #ff0700;
+	    cursor: pointer;
+	    font-size: 18px;
+	    margin-left: 5px;
+	    width: 24px;
+	    height: 24px;
+	    border-radius: 50px;
 	}
 	.column-add-card {
 		padding: 3px 15px;
@@ -102,13 +103,14 @@ body {
 	}
 	.edit-column {
 		background-color: #e67e22;
-		color: #fff;
-		border: 1px solid #e67e22; 
-		cursor: pointer;
-		padding: 0 5px;
-		font-size: 18px;
-		margin-left: 5px;
-		border-radius: 50px;
+	    color: #fff;
+	    border: 1px solid #e67e22;
+	    cursor: pointer;	    
+	    font-size: 18px;
+	    margin-left: 5px;
+	    border-radius: 50px;
+	    width: 24px;
+	    height: 24px;
 		i {
 			font-size: 15px;
 		}
@@ -126,7 +128,7 @@ body {
 		margin-top: 5px;
     	margin-bottom: 0;
 	}
-	.edit-column {
+	.edit-card {
 		background-color: #e67e22;
 	    color: #fff;
 	    border: 1px solid #e67e22;
@@ -135,9 +137,12 @@ body {
 	    font-size: 18px;
 	    margin-left: 5px;
 	    border-radius: 50px;
-	    width: 25px;
-	    height: 25px;
-	    line-height: 20px;
+	    width: 24px;
+	    height: 24px;
+	    line-height: 21px;
+	    i {
+	    	font-size: 15px;
+	    }
 	}
 }
 

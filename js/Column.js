@@ -38,7 +38,6 @@ function Column(id, name) {
 			self.editColumn(newColumnName);
 		});
 
-
 		column.append(columnTitle)
 			.append(columnAddCard)
 			.append(columnDelete)

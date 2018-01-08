@@ -8,13 +8,18 @@ function Card(id, name) {
 	function createCard() {
 		var card = $('<li class="card"></li>');
 		var cardDeleteBtn = $('<button class="btn-delete">x</button>');
-		var editCard = $('<button class="edit-column"><i class="fa fa-pencil" aria-hidden="true"></i></button>');
+		var editCard = $('<button class="edit-card"><i class="fa fa-pencil" aria-hidden="true"></i></button>');
 		var cardDescription = $('<p class="card-description"></p>');
 		
-		cardDeleteBtn.click(function(){
+		cardDeleteBtn.click(function() {
 			self.removeCard();
 		});
-		
+
+		editCard.click(function() {
+			var newCardName = prompt('Enter new card name');
+			self.cardEdit(newCardName);
+		});
+
 		card.append(cardDeleteBtn);
 		card.append(editCard)
 		cardDescription.text(self.name);
@@ -32,23 +37,25 @@ Card.prototype = {
 		      self.element.remove();
 		    }
 	    });
-	}
+	},
+	cardEdit: function(newCardName) {
+		var self = this;
+		$.ajax({
+			url: baseUrl + '/card/' + self.id,
+			method: 'PUT',
+			data: {			
+				id: self.id,	
+				name: newCardName,
+				bootcamp_kanban_column_id: self.id,
+			},
+			success: function(response) {
+				$(self.element).find('.edit-card').text(newCardName);	
+			}
+		});
+	} 
 }
 	
 
 
-	/* function cardEdit() {
-	var self = this;
-	var newNameCard = propmt('Enter new name card');
-	$.ajax({
-		url: baseUrl + '/card/' + self.id,
-		method: 'PUT',
-		data: {				
-			name: newNameCard,
-			bootcamp_kanban_column_id: self.id
-		},
-		success: function(response) {
-				
-		}
-	});
-} */
+
+		
