@@ -85,6 +85,17 @@ body {
       background-color: #fff;
       font-weight: 500;
       border: 1px solid #fff; }
+  .column .edit-column {
+    background-color: #e67e22;
+    color: #fff;
+    border: 1px solid #e67e22;
+    cursor: pointer;
+    padding: 0 5px;
+    font-size: 18px;
+    margin-left: 5px;
+    border-radius: 50px; }
+    .column .edit-column i {
+      font-size: 15px; }
 
 .card {
   margin-top: 40px;
@@ -97,6 +108,18 @@ body {
     font-size: 15px;
     margin-top: 5px;
     margin-bottom: 0; }
+  .card .edit-column {
+    background-color: #e67e22;
+    color: #fff;
+    border: 1px solid #e67e22;
+    cursor: pointer;
+    padding: 0 5px;
+    font-size: 18px;
+    margin-left: 5px;
+    border-radius: 50px;
+    width: 25px;
+    height: 25px;
+    line-height: 20px; }
 
 ul {
   list-style-type: none;

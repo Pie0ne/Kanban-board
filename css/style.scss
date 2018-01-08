@@ -82,8 +82,7 @@ body {
 	h2 {
 		font-family: 'Gloria Hallelujah', cursive;
 		font-size: 40px;
-	}
-	
+	}	
 	.add-card {
 		padding: 3px 15px;
 		background-color: #25459b;
@@ -101,6 +100,19 @@ body {
 			border: 1px solid #fff;
 		}
 	}
+	.edit-column {
+		background-color: #e67e22;
+		color: #fff;
+		border: 1px solid #e67e22; 
+		cursor: pointer;
+		padding: 0 5px;
+		font-size: 18px;
+		margin-left: 5px;
+		border-radius: 50px;
+		i {
+			font-size: 15px;
+		}
+	}
 }
 .card {
 	margin-top: 40px;
@@ -113,6 +125,19 @@ body {
 		font-size: 15px;
 		margin-top: 5px;
     	margin-bottom: 0;
+	}
+	.edit-column {
+		background-color: #e67e22;
+	    color: #fff;
+	    border: 1px solid #e67e22;
+	    cursor: pointer;
+	    padding: 0 5px;
+	    font-size: 18px;
+	    margin-left: 5px;
+	    border-radius: 50px;
+	    width: 25px;
+	    height: 25px;
+	    line-height: 20px;
 	}
 }
 

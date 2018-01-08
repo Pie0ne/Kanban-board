@@ -8,7 +8,7 @@ function Card(id, name) {
 	function createCard() {
 		var card = $('<li class="card"></li>');
 		var cardDeleteBtn = $('<button class="btn-delete">x</button>');
-		var editCard = $('<button class="edit-column">Edit</button>');
+		var editCard = $('<button class="edit-column"><i class="fa fa-pencil" aria-hidden="true"></i></button>');
 		var cardDescription = $('<p class="card-description"></p>');
 		
 		cardDeleteBtn.click(function(){
@@ -35,3 +35,20 @@ Card.prototype = {
 	}
 }
 	
+
+
+	/* function cardEdit() {
+	var self = this;
+	var newNameCard = propmt('Enter new name card');
+	$.ajax({
+		url: baseUrl + '/card/' + self.id,
+		method: 'PUT',
+		data: {				
+			name: newNameCard,
+			bootcamp_kanban_column_id: self.id
+		},
+		success: function(response) {
+				
+		}
+	});
+} */
