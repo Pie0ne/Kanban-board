@@ -1,6 +1,7 @@
 
-function Card(id, name,) {
-	var self = this;	
+function Card(id, name, columnId) {
+	var self = this;
+	this.columnId = columnId	
 	this.id = id;
 	this.name = name || 'No name given';
 	this.element = createCard();
@@ -38,15 +39,15 @@ Card.prototype = {
 		    }
 	    });
 	},
-	cardEdit: function(newCardName) {
-		var self = this;		
+	cardEdit: function(newCardName, columnId) {
+		var self = this;	
 		$.ajax({
 			url: baseUrl + '/card/' + self.id,
 			method: 'PUT',
 			data: {			
 				id: self.id,	
 				name: newCardName,
-				bootcamp_kanban_column_id: 19291,
+				bootcamp_kanban_column_id: self.columnId,
 			},
 			success: function(response) {
 				$(self.element).find('.card-description').text(newCardName);	
