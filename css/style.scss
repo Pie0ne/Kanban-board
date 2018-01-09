@@ -21,7 +21,6 @@ body {
 		text-transform: uppercase;
 		cursor: pointer;
 		letter-spacing: 1px;
-
 		&:hover {
 			transition: .7s;
 			color: #25459b;
@@ -38,8 +37,7 @@ body {
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
-		margin: 0 auto;
-		  
+		margin: 0 auto;		  
 	}
 }
 
