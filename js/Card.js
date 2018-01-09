@@ -1,5 +1,5 @@
 
-function Card(id, name) {
+function Card(id, name,) {
 	var self = this;	
 	this.id = id;
 	this.name = name || 'No name given';
@@ -39,17 +39,17 @@ Card.prototype = {
 	    });
 	},
 	cardEdit: function(newCardName) {
-		var self = this;
+		var self = this;		
 		$.ajax({
 			url: baseUrl + '/card/' + self.id,
 			method: 'PUT',
 			data: {			
 				id: self.id,	
 				name: newCardName,
-				bootcamp_kanban_column_id: self.id,
+				bootcamp_kanban_column_id: 19291,
 			},
 			success: function(response) {
-				$(self.element).find('.edit-card').text(newCardName);	
+				$(self.element).find('.card-description').text(newCardName);	
 			}
 		});
 	} 
