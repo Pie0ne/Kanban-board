@@ -1,1 +1,1 @@
-My personal kanban board. To create this app I used HTML/CSS/JavaScript and API
+My personal kanban board. To create this project I used HTML/CSS/JavaScript and API
