@@ -48,11 +48,13 @@ body {
     color: #fff;
     border: 1px solid #ff0700;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 14px;
     margin-left: 5px;
     width: 24px;
     height: 24px;
-    border-radius: 50px; }
+    border-radius: 50px;
+    padding: 0 5px;
+}
   .column .column-add-card {
     padding: 3px 15px;
     background-color: #25459b;
@@ -91,13 +93,14 @@ body {
     color: #fff;
     border: 1px solid #e67e22;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 13px;
     margin-left: 5px;
     border-radius: 50px;
     width: 24px;
-    height: 24px; }
+    height: 24px;
+    padding: 0 5px;}
     .column .edit-column i {
-      font-size: 15px; }
+      font-size: 13px; }
 
 .card {
   margin-top: 40px;
@@ -116,14 +119,14 @@ body {
     border: 1px solid #e67e22;
     cursor: pointer;
     padding: 0 5px;
-    font-size: 18px;
+    font-size: 13px;
     margin-left: 5px;
     border-radius: 50px;
     width: 24px;
     height: 24px;
-    line-height: 21px; }
+    line-height: 22px; }
     .card .edit-card i {
-      font-size: 15px; }
+      font-size: 13px; }
 
 ul {
   list-style-type: none;
